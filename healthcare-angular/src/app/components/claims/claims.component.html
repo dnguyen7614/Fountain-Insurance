@@ -1,0 +1,26 @@
+<label for="claims"></label>
+<button type="submit" (click)="fetchClaims()">Fetch</button> 
+
+<table class="table table-bordered table-striped">
+<tr>
+    <th>Claim Id</th>
+    <th>Description</th>
+    <th>Amount</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>User Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+</tr>
+<tr *ngFor ="let c of claims">
+    <td>{{ c.id }}</td>
+    <td>{{ c.description }}</td>
+    <td>{{ c.amount }}</td>
+    <td>{{ c.date }}</td>
+    <td>{{ c.status }}</td>
+    <td>{{c.user.userId}}</td>
+    <td>{{c.user.firstName}}</td>
+    <td>{{c.user.lastName}}</td>
+</tr>
+</table>
+
